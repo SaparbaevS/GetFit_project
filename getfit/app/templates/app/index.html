@@ -1,0 +1,53 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+ <section class="hero-section">
+      <div class="content">
+        <h2>Добро пожаловать на GetFit</h2>
+        <p>
+          GetFit ваш надежный партнер в достижении здоровья и фитнеса. <br>
+        Мы предоставляем широкий спектр тренировок, поддерживаем вас в процессе достижения ваших целей.
+        </p>
+        <button class="btn" >Тренировки</button>
+      </div>
+    </section>
+
+    <section class="cards">
+      <div class="card-list">
+        <a href="{% url 'app:train' %}" class="card-item">
+          <div class="img">
+
+            <img src="{% static 'app/img/pilates.png' %}" alt="Card Image">
+          </div>
+            <span class="developer">Зал</span>
+            <h3>Программа тренировок для зала</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+        <a href="{% url 'app:train' %}" class="card-item">
+          <div class="img">
+
+            <img src="{% static 'app/img/dumbbells.png' %}" alt="Card Image">
+          </div>
+            <span class="designer">Гантели</span>
+            <h3>Программа тренировок с гантелями</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+        <a href="{% url 'app:train' %}" class="card-item">
+          <div class="img">
+
+            <img src="{% static 'app/img/workout.png' %}" alt="Card Image">
+          </div>
+            <span class="editor">Дома</span>
+            <h3>Программа тренировок для дома</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+    </div>
+    </section>
+{% endblock content %}

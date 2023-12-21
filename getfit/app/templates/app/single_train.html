@@ -1,0 +1,55 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+{% endblock css %}
+
+{% block content %}
+
+ <section id="filter">
+<!--        <label for="difficulty">Уровень сложности:</label>-->
+<!--        <select id="difficulty" name="difficulty">-->
+<!--            {% for status in statues %}-->
+<!--                <option> <a href="{% url 'app:status' status.id %}">{{ status.name }}</a> </option>-->
+<!--            {% endfor %}-->
+
+<!--        </select>-->
+
+        <label for="category">Категории:</label>
+<!--        <select id="category" name="category">-->
+            {% for category in categories %}
+            <a style="" href="{% url 'app:category' category.id %}"> {{ category.name }}</a> |
+            {% endfor %}
+<!--        </select>-->
+
+    </section>
+
+    <section id="trainings">
+        {% for train in trains %}
+         <div class="training-card" id="home-workout">
+
+
+            <div class="card">
+               <h2><a href="{% url 'app:detail' train.slug %}">{{ train.name }}</a></h2>
+<!--                <h2>{{ train.descriptions }}</h2>-->
+
+                <div class="img">
+                        <img style="width: 360px; height:240px"
+                             src="{{ train.image.url }}">
+                </div>
+
+
+            </div>
+
+
+
+            </div>
+        {% endfor %}
+
+
+        </div>
+    </section>
+
+
+{% endblock content %}

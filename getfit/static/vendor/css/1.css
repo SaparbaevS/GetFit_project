@@ -1,0 +1,9 @@
+
+.content{
+    padding-top: 50px;
+    width: 500px;
+    margin: 0 auto;
+}
+.content >:not(:last-child){
+    margin-bottom: 10px;
+}

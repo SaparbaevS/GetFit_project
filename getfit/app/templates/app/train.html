@@ -1,0 +1,32 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<section id="trainings">
+      <div class="training-card" id="home-workout">
+        <h2>
+            <a href="{% url 'app:single_train' %}">Все упражнения </a>
+        </h2>
+    </div>
+      <div class="training-card" id="home-workout">
+          <h2>
+              <a href="{% url 'app:single_train' %}">Домашняя тренировка</a>
+          </h2>
+          <p>Описание домашней тренировки...</p>
+      </div>
+
+      <div class="training-card" id="dumbbells">
+          <h2>
+              <a href="{% url 'app:single_train' %}">Гантели</a>
+          </h2>
+          <p>Описание тренировок с гантелями...</p>
+      </div>
+
+      <div class="training-card" id="gym">
+          <h2>
+              <a href="{% url 'app:single_train' %}">Зал</a>
+          </h2>
+          <p>Описание тренировок в зале...</p>
+      </div>
+  </section>
+{% endblock content %}
